@@ -5,8 +5,8 @@ import Timeline from "./components/timeline/Timeline";
 function App() {
   const location = useLocation();
 
-  // Example: hide the header/nav when on the Timeline page
-  const hideHeader = location.pathname.startsWith("/timeline");
+  // Hide header when the current path starts with "/timeline"
+  const hideHeader = location.pathname === "/timeline" || location.pathname.startsWith("/timeline/");
 
   return (
     <div className="app-layout">
